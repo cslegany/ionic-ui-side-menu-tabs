@@ -1,0 +1,27 @@
+<ion-split-pane contentId="first-content" [disabled]="!paneEnabled">
+
+  <ion-menu contentId="first-content" menuId="firstMenu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu 1</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" menu="firstMenu">
+          <ion-item routerLink="/tabs/tab1/home" routerDirection="root" routerLinkActive="active-item">
+            <ion-label>
+              Home
+            </ion-label>
+          </ion-item>
+          <ion-item routerLink="/tabs/tab1/news" routerDirection="root" routerLinkActive="active-item">
+            <ion-label>
+              News
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="first-content"></ion-router-outlet>
+</ion-split-pane>
